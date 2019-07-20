@@ -10,32 +10,19 @@ sudo apt install npm
 
 **Install all dependencies in package.json**
 ```
-cd ~/tradehistory_reactjs/
+git clone https://github.com/volkovartem77/arbitable_front.git
+cd ~/arbitable_front/
 sudo npm install
 sudo npm install simple-websocket
 ```
-> No worries if you see follow warnings
-```
-npm WARN optional Skipping failed optional dependency /chokidar/fsevents:
-npm WARN notsup Not compatible with your operating system or architecture: fsevents@1.2.9
-```
 
-**Fix the package bug**\
-https://github.com/rrag/react-stockcharts/issues/721
-
-Chart CHART position in div has been dislocated\
-Please change position to "relative" to fix\
-Path: ~/tradehistory_reactjs/node_modules/react-stockcharts/lib/\
-ChartCanvas.js Line2227:\
-```{ className: className, width: width, height: height, style: { position: "absolute", zIndex: zIndex + 5 } }```
-
-> Check the websocket address in src/App.js line 27 new Socket initialization. It should be you external IP.
+> Check the websocket address in src/App.js line 16 new Socket initialization. It should be you external IP.
 
 # Run app (docker)
 ## Install docker container
 > For username **root**. If you have another username - change **root** at third line
 ```
-cd ~/tradehistory_reactjs
+cd ~/arbitable_front
 curl -sSL https://get.docker.com | sh
 usermod -aG docker root
 curl -L https://github.com/docker/compose/releases/download/1.23.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose

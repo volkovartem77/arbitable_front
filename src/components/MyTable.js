@@ -110,9 +110,9 @@ class MyTable extends Component {
                         <th key={getKey()}>Exchange</th>
                         <th key={getKey()}>Symbol</th>
                         <th key={getKey()}>Buy order</th>
-                        <th key={getKey()}>Volume (BTC)</th>
+                        <th key={getKey()}>Volume</th>
                         <th key={getKey()}>Sell order</th>
-                        <th key={getKey()}>Volume (BTC)</th>
+                        <th key={getKey()}>Volume</th>
                         <th key={getKey()}>Bank rate</th>
                         <th key={getKey()}>Difference %</th>
                     </tr>
